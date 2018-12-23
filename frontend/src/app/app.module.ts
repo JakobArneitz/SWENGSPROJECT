@@ -21,6 +21,14 @@ import {environment} from '../environments/environment';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ErrorInterceptor} from './httpinterceptor/error.interceptor';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { UserRequestComponent } from './user-request/user-request.component';
+import { HeroesFightingListComponent } from './heroes-fighting-list/heroes-fighting-list.component';
 
 defineLocale('de', deLocale);
 
@@ -39,7 +47,15 @@ export const httpInterceptorProviders = [
     ActorFormComponent,
     ActorListComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
+    UserFormComponent,
+    UsersListComponent,
+    HeroFormComponent,
+    HeroesListComponent,
+    UserRequestComponent,
+    HeroesFightingListComponent
   ],
   imports: [
     BrowserModule,
