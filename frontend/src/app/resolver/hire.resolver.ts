@@ -3,6 +3,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {Observable} from 'rxjs';
 import {decimalDigest} from '@angular/compiler/src/i18n/digest';
 
+/*
 @Injectable({
   providedIn: 'root'
 })
@@ -20,3 +21,4 @@ export class HireResolver implements Resolve<Observable<any>> {
     return null;
   }
 }
+*/

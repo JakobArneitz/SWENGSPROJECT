@@ -12,6 +12,9 @@ import {HeroesListComponent} from './heroes-list/heroes-list.component';
 import {HeroesFightingListComponent} from './heroes-fighting-list/heroes-fighting-list.component';
 import {UserRequestComponent} from './user-request/user-request.component';
 
+import {UserResolver} from './resolver/user.resolver';
+
+
 const routes: Routes = [
   {
     path: '', redirectTo: '/heroes-list', pathMatch: 'full'
@@ -23,14 +26,6 @@ const routes: Routes = [
     path: 'hero-form', component: HeroFormComponent,
     canActivate: [AuthGuard],
     resolve: {
-      movies: MoviesResolver,
-    }
-  },
-  {
-    path: 'hero-form/:id'
-    , component: HeroFormComponent,
-    canActivate: [AuthGuard], resolve: {
-      hero: HeroResolver,
       movies: MoviesResolver,
     }
   },
@@ -62,13 +57,7 @@ const routes: Routes = [
   {
     path: 'user-request', component: UserRequestComponent, canActivate: [AuthGuard]
   },
-  {
-    path: 'user-request/:id'
-    , component: UserRequestComponent,
-    canActivate: [AuthGuard], resolve: {
-      hire: HireResolver
-    }
-  },
+
 ];
 
 @NgModule({

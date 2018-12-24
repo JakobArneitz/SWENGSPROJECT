@@ -4,9 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {ActorFormComponent} from './actor-form/actor-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {ActorListComponent} from './actor-list/actor-list.component';
 import {JwtModule} from '@auth0/angular-jwt';
 import {LoginComponent} from './login/login.component';
 import {LogoutComponent} from './logout/logout.component';
@@ -44,8 +42,6 @@ export const httpInterceptorProviders = [
 @NgModule({
   declarations: [
     AppComponent,
-    ActorFormComponent,
-    ActorListComponent,
     LoginComponent,
     LogoutComponent,
     AdminDashboardComponent,
