@@ -11,6 +11,7 @@ import java.util.Objects;
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
+
 public class User {
 
     @Id
@@ -20,6 +21,14 @@ public class User {
     private String username;
     private String password;
     private boolean admin;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public boolean isAdmin() {
         return admin;
@@ -36,6 +45,7 @@ public class User {
     public String getPassword() {
         return password;
     }
+
 
     public void setUsername(String username) {
         this.username = username;
