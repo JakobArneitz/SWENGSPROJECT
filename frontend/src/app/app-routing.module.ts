@@ -3,17 +3,15 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {AuthGuard} from './auth.guard';
 import {MoviesResolver} from './resolver/movies.resolver';
-import {HeroFormComponent} from './hero-form/hero-form.component';
-import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
-import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
-import {UserFormComponent} from './user-form/user-form.component';
-import {UsersListComponent} from './users-list/users-list.component';
-import {HeroesListComponent} from './heroes-list/heroes-list.component';
-import {HeroesFightingListComponent} from './heroes-fighting-list/heroes-fighting-list.component';
-import {UserRequestComponent} from './user-request/user-request.component';
-
 import {UserResolver} from './resolver/user.resolver';
-
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+import { HeroesFightingListComponent } from './heroes-fighting-list/heroes-fighting-list.component';
+import { UserRequestComponent } from './user-request/user-request.component';
 
 const routes: Routes = [
   {
@@ -30,7 +28,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'admin-dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard]
+    path: 'admin-dashboard', component: AdminDashboardComponent
   },
   {
     path: 'user-dashboard', component: UserDashboardComponent, canActivate: [AuthGuard]
@@ -57,7 +55,6 @@ const routes: Routes = [
   {
     path: 'user-request', component: UserRequestComponent, canActivate: [AuthGuard]
   },
-
 ];
 
 @NgModule({
@@ -66,4 +63,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
-

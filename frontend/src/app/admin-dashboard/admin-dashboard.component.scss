@@ -1,0 +1,30 @@
+.div_admin_dashboard{
+  max-width:600px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:2px;
+  padding:20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align:center;
+}
+.div_admin_dashboard h1{
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 10px;
+  color: #5C5C5C;
+  font-size:x-large;
+}
+.div_admin_dashboard button{
+  background: #2471FF;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #5994FF;
+  border-radius: 3px;
+  color: #D2E2FF;
+  margin: 10px;
+}
+.div_admin_dashboard button:hover{
+  background: #6B9FFF;
+  color:#fff;
+}

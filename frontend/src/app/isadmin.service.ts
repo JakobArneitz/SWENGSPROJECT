@@ -18,10 +18,9 @@ export class IsadminService {
     this.jwtHelperService = new JwtHelperService();
     const token = localStorage.getItem(this.accessTokenLocalStorageKey);
     if (token) {
-      if(this.jwtHelperService.decodeToken(token).authorities[0] == 'ROLE_ADMIN')
-        this.isAdmin=true;
-      else
-        this.isAdmin=false;
+      if (this.jwtHelperService.decodeToken(token).authorities[0] === 'ROLE_ADMIN') {
+        this.isAdmin = true; } else {
+        this.isAdmin = false; }
     }
   }
 
