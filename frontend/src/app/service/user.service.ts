@@ -40,7 +40,8 @@ export class UserService {
       localStorage.setItem(this.accessTokenLocalStorageKey, token);
       console.log(this.jwtHelperService.decodeToken(token));
       this.loggedInChange.next(true);
-      this.router.navigate(['/actor-list']);
+      if (this.jwtHelperService.decodeToken(token).authorities[0] === 'ROLE_ADMIN') {
+        this.router.navigate(['/admin-dashboard']); } else {this.router.navigate(['/user-dashboard']); }
       return res;
     }));
   }
