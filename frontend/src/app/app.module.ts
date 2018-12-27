@@ -23,10 +23,10 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UsersListComponent } from './users-list/users-list.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
-import { UserRequestComponent } from './user-request/user-request.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 import { HeroesFightingListComponent } from './heroes-fighting-list/heroes-fighting-list.component';
+import { UserRequestComponent } from './user-request/user-request.component';
 
 defineLocale('de', deLocale);
 
@@ -48,10 +48,10 @@ export const httpInterceptorProviders = [
     UserDashboardComponent,
     UserFormComponent,
     UsersListComponent,
-    HeroFormComponent,
     HeroesListComponent,
+    HeroFormComponent,
+    HeroesFightingListComponent,
     UserRequestComponent,
-    HeroesFightingListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,18 @@
-<form (ngSubmit)="login()">
-  <label>
-    Username:
-    <input type="text" name="username" [(ngModel)]="user.username"/>
-  </label>
-  <label>
-    Password:
-    <input type="text" name="password" [(ngModel)]="user.password"/>
-  </label>
-  <button type="submit">
-    Login
-  </button>
+<form (ngSubmit)="login()" class="form-login">
+  <h1>Already a member? Login Here!!!</h1>
+  <ul>
+    <li>
+      <label>Username</label><input type="text" name="username" [(ngModel)]="user.username"/>
+      <span>Enter your Username here</span>
+    </li>
+    <li>
+      <label>Password</label><input type="text" name="password" [(ngModel)]="user.password"/>
+      <span>Enter your Password here</span>
+    </li>
+    <li>
+      <button type="submit">
+        Login
+      </button>
+    </li>
+  </ul>
 </form>
