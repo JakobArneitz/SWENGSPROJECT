@@ -1,3 +1,49 @@
-<p>
-  heroes-list works!
-</p>
+<h1>Available Heroes</h1>
+<table class="table-hero">
+  <tr>
+    <th>Avatar</th>
+    <th>Superhero Name</th>
+    <th>Alive</th>
+    <th>Rating</th>
+    <th>Gender</th>
+    <th>Movies</th>
+    <th>Super Power</th>
+    <th *ngIf="this.auth.isAdmin === true">Edit</th>
+    <th *ngIf="this.auth.isAdmin === true">Delete</th>
+  </tr>
+  <tr *ngIf="heroes?.length < 1"><td colspan="10">There are currently no heroess!!! Try to add some.<td></tr>
+  <tr *ngFor="let hero of heroes">
+    <td><ngx-avatar src="assets/avatars/{{hero.avatar}}.png"></ngx-avatar></td>
+    <td>{{hero.superheroName}} ({{hero.firstName}} {{hero.lastName}})</td>
+    <td>{{hero.alive}}</td>
+    <td>{{hero.rating}}</td>
+    <td>{{hero.gender}}</td>
+    <td>
+      <div class="modal-container">
+        <input id="modal-toggle" type="checkbox">
+        <label class="movies_btn" for="modal-toggle" (click)="getMoviesForHero(hero.id)">Movies</label>
+        <label class="modal-backdrop" for="modal-toggle"></label>
+        <div class="modal-content">
+          <label class="modal-close" for="modal-toggle">&#x2715;</label>
+          <h1>List of Movies this superhero appeared in</h1><hr />
+          <div *ngIf="moviesForHero.length > 0">
+            <table class="table-hero">
+              <tr>
+                <th>Movies</th>
+              </tr>
+              <tr *ngFor="let movie of moviesForHero">
+                <td>{{movie}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>{{hero.superPower}}</td>
+    <td *ngIf="this.auth.isAdmin === true"><button [routerLink]="'/hero-form/' + hero.id">Edit</button></td>
+    <td *ngIf="this.auth.isAdmin === true"><button type="button" (click)="deleteHero(hero)">Delete</button></td>
+  </tr>
+  <button type="button" (click)="back()">
+    Back
+  </button>
+</table>

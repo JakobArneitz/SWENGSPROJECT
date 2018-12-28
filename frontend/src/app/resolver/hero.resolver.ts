@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
 import {decimalDigest} from '@angular/compiler/src/i18n/digest';
-/*
+import {HeroService} from '../service/hero.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,4 +21,4 @@ export class HeroResolver implements Resolve<Observable<any>> {
     return null;
   }
 }
-*/
+

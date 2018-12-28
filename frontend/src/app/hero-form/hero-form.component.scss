@@ -1,0 +1,114 @@
+.hero-form{
+  max-width:400px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:2px;
+  padding:20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align:center;
+}
+.hero-form h1{
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 10px;
+  color: #5C5C5C;
+  font-size:x-large;
+}
+.hero-form ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.hero-form li{
+  display: block;
+  padding: 9px;
+  border:1px solid #DDDDDD;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+.hero-form li:last-child{
+  border:none;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.hero-form li > label{
+  display: block;
+  float: left;
+  margin-top: -19px;
+  background: #FFFFFF;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: #B9B9B9;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero-form input[type="text"],
+.hero-form input[type="date"],
+.hero-form input[type="datetime"],
+.hero-form input[type="email"],
+.hero-form input[type="number"],
+.hero-form input[type="search"],
+.hero-form input[type="time"],
+.hero-form input[type="url"],
+.hero-form input[type="password"],
+.hero-form textarea,
+.hero-form select
+{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hero-form input[type="text"]:focus,
+.hero-form input[type="date"]:focus,
+.hero-form input[type="datetime"]:focus,
+.hero-form input[type="email"]:focus,
+.hero-form input[type="number"]:focus,
+.hero-form input[type="search"]:focus,
+.hero-form input[type="time"]:focus,
+.hero-form input[type="url"]:focus,
+.hero-form input[type="password"]:focus,
+.hero-form textarea:focus,
+.hero-form select:focus
+{
+}
+.hero-form li > span{
+  background: #F3F3F3;
+  display: block;
+  padding: 3px;
+  margin: 0 -9px -9px -9px;
+  text-align: center;
+  color: #C0C0C0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.hero-form textarea{
+  resize:none;
+}
+.hero-form input[type="submit"],
+.hero-form input[type="button"],
+.hero-form button {
+  width:150px;
+  background: #2471FF;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #5994FF;
+  border-radius: 3px;
+  color: #D2E2FF;
+  margin: 10px;
+}
+.hero-form input[type="submit"]:hover,
+.hero-form input[type="button"]:hover,
+.hero-form button:hover{
+  background: #6B9FFF;
+  color:#fff;
+}

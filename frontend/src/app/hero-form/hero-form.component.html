@@ -1,3 +1,92 @@
-<p>
-  hero-form works!
-</p>
+<form [formGroup]="heroForm" (ngSubmit)="saveHero()" class="hero-form">
+  <h1>Create Hero!!!</h1>
+  <ul>
+    <li>
+      <label>First Name</label>
+      <input id="firstName" type="text" name="firstName" formControlName="firstName"/>
+      <span>Enter first name here
+                <div *ngIf="heroForm.controls.firstName.invalid && (heroForm.controls.firstName.dirty || heroForm.controls.firstName.touched)">
+                    <div *ngIf="heroForm.controls.firstName.errors.required">
+                        First Name is required.
+                    </div>
+                    <div *ngIf="heroForm.controls.firstName.errors.minlength">
+                        First Name must be at least 2 characters long.
+                    </div>
+                </div>
+            </span>
+    </li>
+    <li>
+      <label>Last Name</label>
+      <input id="lastName" type="text" name="lastName" formControlName="lastName"/>
+      <span>Enter last name here</span>
+    </li>
+    <li>
+      <label>Superhero Name</label>
+      <input id="superheroName" type="text" name="superheroName" formControlName="superheroName"/>
+      <span>Enter superhero name here</span>
+    </li>
+    <li>
+      <label for="rating">Rating:</label>
+      <rating id="rating" type="text" name="rating" [max]="10" formControlName="rating"></rating>
+      <span>Enter rating here</span>
+    </li>
+    <li>
+      <label for="movies">Movies</label>
+      <ngx-select id="movies" [items]="movieOptions" name="movies" [multiple]="true"
+                  formControlName="movies" optionTextField="title"></ngx-select>
+      <span>Select the movies superhero appeared in </span>
+    </li>
+    <li>
+      <label>Gender</label>
+      <div>
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" formControlName="gender" value="FEMALE">
+        <label for="exampleRadios1">
+          Female
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" formControlName="gender" value="MALE">
+        <label for="exampleRadios2">
+          Male
+        </label>
+      </div>
+      <div>
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" formControlName="gender" value="OTHER">
+        <label for="exampleRadios3">
+          Other
+        </label>
+      </div>
+      <span>Check gender here</span>
+    </li>
+    <li>
+      <label>Alive</label>
+      <div>
+        <input class="form-check-input" type="checkbox" name="alive" id="exampleCheckbox" formControlName="alive" [value]="true">
+        <label for="exampleCheckbox">
+          Alive
+        </label>
+      </div>
+      <span>Is he Alive?</span>
+    </li>
+    <li>
+      <label>Super Power</label>
+      <input id="superPower" type="text" name="superPower" formControlName="superPower"/>
+      <span>Enter super power here</span>
+
+    </li>
+    <li>
+      <label>Avatar</label>
+      <input id="avatar" type="text" name="avatar" formControlName="avatar"/>
+      <span>Enter avatar here (Number from 1- 8 for a random avatar)</span>
+
+    </li>
+    <li>
+      <button type="submit">
+        Save Hero
+      </button>
+      <button type="button" (click)="back()">
+        Back
+      </button>
+    </li>
+  </ul>
+</form>
