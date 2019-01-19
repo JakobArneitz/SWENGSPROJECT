@@ -4,6 +4,8 @@ import {LoginComponent} from './login/login.component';
 import {AuthGuard} from './auth.guard';
 import {MoviesResolver} from './resolver/movies.resolver';
 import {UserResolver} from './resolver/user.resolver';
+import {HeroResolver} from './resolver/hero.resolver';
+import {HireResolver} from './resolver/hire.resolver';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserFormComponent } from './user-form/user-form.component';
@@ -24,6 +26,14 @@ const routes: Routes = [
     path: 'hero-form', component: HeroFormComponent,
     canActivate: [AuthGuard],
     resolve: {
+      movies: MoviesResolver,
+    }
+  },
+  {
+    path: 'hero-form/:id'
+    , component: HeroFormComponent,
+    canActivate: [AuthGuard], resolve: {
+      hero: HeroResolver,
       movies: MoviesResolver,
     }
   },
@@ -54,6 +64,13 @@ const routes: Routes = [
   },
   {
     path: 'user-request', component: UserRequestComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: 'user-request/:id'
+    , component: UserRequestComponent,
+    canActivate: [AuthGuard], resolve: {
+      hire: HireResolver
+    }
   },
 ];
 

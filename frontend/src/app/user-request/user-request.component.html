@@ -1,3 +1,47 @@
-<p>
-  user-request works!
-</p>
+<form [formGroup]="hireForm" (ngSubmit)="saveHire()" class="hire-fom">
+    <h1>Hire Hero!!!</h1>
+    <ul>
+        <li>
+            <label>Enemy Name</label>
+            <input id="enemyName" type="text" name="enemyName" formControlName="enemyName"/>
+            <span>Enter enemy name here
+                <div *ngIf="hireForm.controls.enemyName.invalid && (hireForm.controls.enemyName.dirty || hireForm.controls.enemyName.touched)">
+                    <div *ngIf="hireForm.controls.enemyName.errors.required">
+                        Enemy Name is required.
+                    </div>
+                    <div *ngIf="hireForm.controls.enemyName.errors.minlength">
+                        Enemy Name must be at least 2 characters long.
+                    </div>
+                </div>
+            </span>
+        </li>
+        <li>
+            <label>Enemy Power</label>
+            <input id="enemyPower" type="text" name="enemyPower" formControlName="enemyPower"/>
+            <span>Enter enemy power here</span>
+        </li>
+        <li>
+            <label for="superhero">Assign Hero</label>
+        <ngx-select id="superhero" [items]="heroOptions" name="superhero" formControlName="superhero" optionTextField="superheroName"></ngx-select>
+        <span>Select the movies superhero appeared in </span>
+        </li>
+        <li>
+            <label for="hireFrom">Hire Hero From</label>
+            <input id="hireFrom" type="text" bsDatepicker name="hireFrom" formControlName="hireFrom" class="form-control"/>
+            <span>Enter date here from which you would like to hire the hero</span>
+        </li>
+        <li>
+            <label for="hireTo">Hire Hero To</label>
+            <input id="hireTo" type="text" bsDatepicker name="hireTo" formControlName="hireTo" class="form-control"/>
+            <span>Enter date here until which you would like to hire the hero</span>
+        </li>
+        <li>
+            <button type="submit">
+                Hire Hero
+            </button>
+            <button type="button" (click)="back()">
+                Back
+            </button>
+        </li>
+    </ul>
+</form>

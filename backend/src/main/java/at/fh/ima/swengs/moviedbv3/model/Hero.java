@@ -26,10 +26,10 @@ public class Hero {
     private Integer rating;
 
     private boolean alive = true;
-
-    private String superheroName;
-    private String superPower;
-    private String avatar;
+    
+	private String superheroName;
+	private String superPower;
+	private String avatar;
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
@@ -74,30 +74,30 @@ public class Hero {
     }
 
     public String getSuperheroName() {
-        return superheroName;
-    }
+		return superheroName;
+	}
 
-    public void setSuperheroName(String superheroName) {
-        this.superheroName = superheroName;
-    }
+	public void setSuperheroName(String superheroName) {
+		this.superheroName = superheroName;
+	}
 
-    public String getSuperPower() {
-        return superPower;
-    }
+	public String getSuperPower() {
+		return superPower;
+	}
 
-    public void setSuperPower(String superPower) {
-        this.superPower = superPower;
-    }
+	public void setSuperPower(String superPower) {
+		this.superPower = superPower;
+	}
 
-    public String getAvatar() {
-        return avatar;
-    }
+	public String getAvatar() {
+		return avatar;
+	}
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
 
-    public Set<Movie> getMovies() {
+	public Set<Movie> getMovies() {
         return movies;
     }
 

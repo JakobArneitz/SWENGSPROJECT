@@ -33,12 +33,6 @@ public class Actor {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dayOfBirth;
 
-    private Float weight;
-
-    private Float height;
-
-    private String nickName;
-
     @ManyToMany
     @JoinTable(name = "movies_actors",
             joinColumns = @JoinColumn(name = "actor_id"),
@@ -132,30 +126,6 @@ public class Actor {
         this.version = version;
     }
 
-    public Float getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Float weight) {
-        this.weight = weight;
-    }
-
-    public Float getHeight() {
-        return height;
-    }
-
-    public void setHeight(Float height) {
-        this.height = height;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -175,14 +145,7 @@ public class Actor {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", rating=" + rating +
-                ", alive=" + alive +
-                ", gender=" + gender +
-                ", dayOfBirth=" + dayOfBirth +
-                ", weight=" + weight +
-                ", height=" + height +
-                ", nickName='" + nickName + '\'' +
-                ", movies=" + movies +
+                ", dayOfBirth='" + dayOfBirth + '\'' +
                 ", version=" + version +
                 '}';
     }

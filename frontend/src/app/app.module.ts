@@ -19,6 +19,7 @@ import {environment} from '../environments/environment';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ErrorInterceptor} from './httpinterceptor/error.interceptor';
+import { AvatarModule } from 'ngx-avatar';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserFormComponent } from './user-form/user-form.component';
@@ -54,6 +55,7 @@ export const httpInterceptorProviders = [
     UserRequestComponent,
   ],
   imports: [
+    AvatarModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

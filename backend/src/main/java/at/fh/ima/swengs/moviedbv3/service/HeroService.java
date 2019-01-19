@@ -24,5 +24,5 @@ public class HeroService {
     public Hero save(Hero entity) {
         return heroRepository.save(entity);
     }
-
+    
 }

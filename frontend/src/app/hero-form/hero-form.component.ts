@@ -21,9 +21,9 @@ export class HeroFormComponent implements OnInit {
   constructor(public auth: IsadminService,private heroService: HeroService, private route: ActivatedRoute, private router: Router,
               private movieService: MovieService) {
     if(this.auth.isAdmin === false){
-      this.router.navigate(['/user-dashboard']);
+        this.router.navigate(['/user-dashboard']);
     }
-
+              
   }
 
   ngOnInit() {
@@ -85,8 +85,8 @@ export class HeroFormComponent implements OnInit {
     }
 
   }
-
+  
   back() {
-    this.router.navigate(['/admin-dashboard']);
-  }
+        this.router.navigate(['/admin-dashboard']);
+    }
 }

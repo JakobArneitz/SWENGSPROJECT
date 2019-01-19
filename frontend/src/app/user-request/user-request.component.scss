@@ -1,0 +1,114 @@
+.hire-fom{
+    max-width:400px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:2px;
+    padding:20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align:center;
+}
+.hire-fom h1{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+    color: #5C5C5C;
+    font-size:x-large;
+}
+.hire-fom ul{
+    list-style:none;
+    padding:0;
+    margin:0;	
+}
+.hire-fom li{
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.hire-fom li:last-child{
+    border:none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.hire-fom li > label{
+    display: block;
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    height: 14px;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hire-fom input[type="text"],
+.hire-fom input[type="date"],
+.hire-fom input[type="datetime"],
+.hire-fom input[type="email"],
+.hire-fom input[type="number"],
+.hire-fom input[type="search"],
+.hire-fom input[type="time"],
+.hire-fom input[type="url"],
+.hire-fom input[type="password"],
+.hire-fom textarea,
+.hire-fom select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hire-fom input[type="text"]:focus,
+.hire-fom input[type="date"]:focus,
+.hire-fom input[type="datetime"]:focus,
+.hire-fom input[type="email"]:focus,
+.hire-fom input[type="number"]:focus,
+.hire-fom input[type="search"]:focus,
+.hire-fom input[type="time"]:focus,
+.hire-fom input[type="url"]:focus,
+.hire-fom input[type="password"]:focus,
+.hire-fom textarea:focus,
+.hire-fom select:focus
+{
+}
+.hire-fom li > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.hire-fom textarea{
+    resize:none;
+}
+.hire-fom input[type="submit"],
+.hire-fom input[type="button"],
+.hire-fom button {
+    width:150px;
+    background: #2471FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994FF;
+    border-radius: 3px;
+    color: #D2E2FF;
+    margin: 10px;
+}
+.hire-fom input[type="submit"]:hover,
+.hire-fom input[type="button"]:hover,
+.hire-fom button:hover{
+    background: #6B9FFF;
+    color:#fff;
+}

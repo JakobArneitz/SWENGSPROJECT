@@ -11,7 +11,6 @@ import java.util.Objects;
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
-
 public class User {
 
     @Id
@@ -21,8 +20,8 @@ public class User {
     private String username;
     private String password;
     private boolean admin;
-
-    public long getId() {
+	
+	public long getId() {
         return id;
     }
 

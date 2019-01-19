@@ -15,9 +15,6 @@ public class ActorDTO {
     private Integer rating;
     private Gender gender;
     private Date dayOfBirth;
-    private Float weight;
-    private Float height;
-    private String nickName;
     private Set<Long> movies;
 
     public Long getId() {
@@ -83,16 +80,4 @@ public class ActorDTO {
     public void setMovies(Set<Long> movies) {
         this.movies = movies;
     }
-
-    public Float getWeight() { return weight; }
-
-    public void setWeight(Float weight) { this.weight = weight; }
-
-    public Float getHeight() { return height;}
-
-    public void setHeight(Float height) { this.height = height;}
-
-    public String getNickName() { return nickName; }
-
-    public void setNickName(String nickName) { this.nickName = nickName; }
 }

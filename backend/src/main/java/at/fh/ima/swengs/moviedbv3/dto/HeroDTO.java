@@ -9,37 +9,37 @@ public class HeroDTO {
     private Long id;
     private String firstName;
     private String lastName;
-    private String superheroName;
-    private boolean alive = true;
+	private String superheroName;
+	private boolean alive = true;
     private Integer rating;
     private Gender gender;
     private Set<Long> movies;
-    private String superPower;
-    private String avatar;
-
+	private String superPower;
+	private String avatar;
+	
     public String getSuperheroName() {
-        return superheroName;
-    }
+		return superheroName;
+	}
 
-    public void setSuperheroName(String superheroName) {
-        this.superheroName = superheroName;
-    }
+	public void setSuperheroName(String superheroName) {
+		this.superheroName = superheroName;
+	}
 
-    public String getSuperPower() {
-        return superPower;
-    }
+	public String getSuperPower() {
+		return superPower;
+	}
 
-    public void setSuperPower(String superPower) {
-        this.superPower = superPower;
-    }
+	public void setSuperPower(String superPower) {
+		this.superPower = superPower;
+	}
 
-    public String getAvatar() {
-        return avatar;
-    }
+	public String getAvatar() {
+		return avatar;
+	}
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
 
     public Long getId() {
         return id;

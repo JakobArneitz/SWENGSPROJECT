@@ -5,7 +5,7 @@ public class UserDTO {
     private Long id;
     private String username;
     private String password;
-    private boolean admin;
+	private boolean admin;
 
     public Long getId() {
         return id;

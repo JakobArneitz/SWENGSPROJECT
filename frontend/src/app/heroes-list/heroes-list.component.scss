@@ -1,36 +1,36 @@
 .table-hero{
-  max-width:1000px;
-  margin:50px auto;
-  background:#fff;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-align:center;
+	max-width:1000px;
+	margin:50px auto;
+	background:#fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align:center;
 }
 h1{
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0px 0px 20px 0px;
-  color: #5C5C5C;
-  font-size:x-large;
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size:x-large;
 }
 
 .table-hero button,a,.movies_btn{
-  width: 150px;
-  background: #2471FF;
-  border: none;
-  padding: 10px 20px 10px 20px;
-  border-bottom: 3px solid #5994FF;
-  border-radius: 3px;
-  color: #D2E2FF;
-  margin: 10px;
-  text-align: center;
+	width: 150px;
+	background: #2471FF;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5994FF;
+	border-radius: 3px;
+	color: #D2E2FF;
+	margin: 10px;
+        text-align: center;
 }
 .table-hero button:hover,
 .table-hero a:hover,
-.movies_btn:hover
+.movies_btn:hover,
 {
-  background: #6B9FFF;
-  color:#fff;
+	background: #6B9FFF;
+	color:#fff;
 }
 
 .table-hero {
@@ -52,29 +52,29 @@ h1{
   text-align: center;
   background-color: #2471FF;
   color: white;
-
+  
 }
 
 .movies_btn{
-  text-align:center;
+	text-align:center;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
 body { height: 100vh; background: #ccc; overflow: hidden; }
 
 .modal-container {
-
+    
   padding-top: 0px;
   position: relative;
-  .modal-content,
+  .modal-content, 
   .modal-backdrop {
-    height: 0;
-    width: 0;
+    height: 0; 
+    width: 0; 
     opacity: 0;
-    overflow-y: scroll;
+	overflow-y: scroll;
     visibility: hidden;
     cursor: pointer;
-    transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in; 
   }
   .modal-close {
     color: #aaa;
@@ -89,11 +89,11 @@ body { height: 100vh; background: #ccc; overflow: hidden; }
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    &:hover { color: #333; }
-  }
-
+    &:hover { color: #333; }        
+  }      
+  
   #modal-toggle {
-    display: none;
+    display: none;  
     &.active ~ .modal-backdrop,
     &:checked ~ .modal-backdrop {
       background-color: rgba(0, 0, 0, 0.6);
@@ -104,8 +104,8 @@ body { height: 100vh; background: #ccc; overflow: hidden; }
       top: 0;
       z-index: 9;
       visibility: visible;
-      opacity: 1;
-      transition: opacity 0.2s ease-in;
+      opacity: 1;      
+      transition: opacity 0.2s ease-in; 
     }
     &.active ~ .modal-content,
     &:checked ~ .modal-content {
@@ -122,8 +122,8 @@ body { height: 100vh; background: #ccc; overflow: hidden; }
       z-index: 999;
       pointer-events: auto;
       cursor: auto;
-      visibility: visible;
-      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
-    }
+      visibility: visible;      
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);                 
+    }  
   }
 }

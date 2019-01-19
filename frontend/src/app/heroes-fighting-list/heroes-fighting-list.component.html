@@ -1,3 +1,25 @@
-<p>
-  heroes-fighting-list works!
-</p>
+<h1>Heroes Currently Fighting</h1>
+<table class="table-fight">
+    <tr>
+        <th>Enemy Name</th>
+        <th>Enemy Power</th>
+        <th>Superhero Assigned</th>
+        <th>Assigned Date From</th>
+        <th>Assigned Date End</th>
+        <th *ngIf="this.auth.isAdmin === true">Edit</th>
+        <th *ngIf="this.auth.isAdmin === true">Delete</th>
+    </tr>
+    <tr *ngIf="hires?.length < 1"><td colspan="6">There are currently no hires!!! Try to add some.<td></tr>
+    <tr *ngFor="let hire of hires">
+        <td>{{hire.enemyName}}</td>
+        <td>{{hire.enemyPower}}</td>
+        <td>{{hire.superhero}}</td>
+        <td>{{hire.hireFrom}}</td>
+        <td>{{hire.hireTo}}</td>
+        <td *ngIf="this.auth.isAdmin === true"><button [routerLink]="'/user-request/' + hire.id">Edit</button></td>
+        <td *ngIf="this.auth.isAdmin === true"><button type="button" (click)="deleteHire(hire)">Delete</button></td>
+    </tr>
+    <button type="button" (click)="back()">
+        Back
+    </button>
+</table>

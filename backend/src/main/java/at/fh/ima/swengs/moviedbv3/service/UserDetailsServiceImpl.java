@@ -45,7 +45,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
                 // The "User" class is provided by Spring and represents a model class for user to be returned by UserDetailsService
                 // And used by auth manager to verify and check user authentication.
-                return new User(user.getUsername(), user.getPassword(), grantedAuthorities);
+                return new User(user.getUsername(), encoder.encode(user.getPassword()), grantedAuthorities);
             }
         } catch (Exception e) {
         }
@@ -59,18 +59,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (userRepository.count() == 0) {
             at.fh.ima.swengs.moviedbv3.model.User admin = new at.fh.ima.swengs.moviedbv3.model.User();
             admin.setUsername("admin");
-            admin.setPassword(encoder.encode("12345"));
+            admin.setPassword("12345");
             admin.setAdmin(true);
             userRepository.save(admin);
 
             at.fh.ima.swengs.moviedbv3.model.User tester = new at.fh.ima.swengs.moviedbv3.model.User();
             tester.setUsername("tester");
-            tester.setPassword(encoder.encode("12345"));
+            tester.setPassword("12345");
             userRepository.save(tester);
         }
 
         if (movieRepository.count() == 0) {
-            List<String> movieNames = Arrays.asList("Tangled", "The Princess and the Frog", "Beauty and the Beast", "Monsters, Inc.", "Aladdin", "Pocahontas", "Hercules", "A Bug's Life");
+            List<String> movieNames = Arrays.asList("Wonder Woman","Spider-man","Batman","Superman","Justice League", "Iron Man", "Hulk", "Avengers", "Black Panther", "Deadpool");
             List<Movie> movies = new ArrayList<>();
             movieNames.forEach(movieName -> {
                 Movie movie = new Movie();

@@ -12,32 +12,32 @@ import { IsadminService } from '../isadmin.service';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+    
+    users: Array<User>;
 
-  users: Array<User>;
-
-  constructor(public auth: IsadminService, private http: HttpClient, private userService: UserService, private router: Router, private route: ActivatedRoute) {
-    if (this.auth.isAdmin === false) {
-      this.router.navigate(['/user-dashboard']);
+    constructor(public auth: IsadminService,private http: HttpClient, private userService: UserService, private router: Router, private route: ActivatedRoute) {
+        if(this.auth.isAdmin === false){
+            this.router.navigate(['/user-dashboard']);
+        }
     }
-  }
 
-  ngOnInit() {
-    this.userService.getAll()
-      .subscribe((users: any) => {
-        this.users = users._embedded.users;
-        console.log(this.users);
-      });
-  }
+    ngOnInit() {	  
+        this.userService.getAll()
+                .subscribe((users: any) => {	  
+                this.users = users._embedded.users;
+                console.log(this.users);
+            });
+    }
 
-  deleteUser(user: User) {
-    this.userService.delete(user)
-      .subscribe(() => {
-        this.ngOnInit();
-      });
-  }
-
-  back() {
-    this.router.navigate(['/admin-dashboard']);
-  }
+    deleteUser(user: User) {
+        this.userService.delete(user)
+          .subscribe(() => {
+            this.ngOnInit();
+        });
+    }
+    
+    back() {
+        this.router.navigate(['/admin-dashboard']);
+    }
 
 }

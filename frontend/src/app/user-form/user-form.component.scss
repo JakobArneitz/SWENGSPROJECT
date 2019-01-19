@@ -1,47 +1,47 @@
 .user-form{
-  max-width:400px;
-  margin:20px auto;
-  background:#fff;
-  border-radius:2px;
-  padding:20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-align:center;
+    max-width:400px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:2px;
+    padding:20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align:center;
 }
 .user-form h1{
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 10px;
-  color: #5C5C5C;
-  font-size:x-large;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+    color: #5C5C5C;
+    font-size:x-large;
 }
 .user-form ul{
-  list-style:none;
-  padding:0;
-  margin:0;
+    list-style:none;
+    padding:0;
+    margin:0;	
 }
 .user-form li{
-  display: block;
-  padding: 9px;
-  border:1px solid #DDDDDD;
-  margin-bottom: 30px;
-  border-radius: 3px;
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
 }
 .user-form li:last-child{
-  border:none;
-  margin-bottom: 0px;
-  text-align: center;
+    border:none;
+    margin-bottom: 0px;
+    text-align: center;
 }
 .user-form li > label{
-  display: block;
-  float: left;
-  margin-top: -19px;
-  background: #FFFFFF;
-  height: 14px;
-  padding: 2px 5px 2px 5px;
-  color: #B9B9B9;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    height: 14px;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .user-form input[type="text"],
 .user-form input[type="date"],
@@ -55,18 +55,18 @@
 .user-form textarea,
 .user-form select
 {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  width: 100%;
-  display: block;
-  outline: none;
-  border: none;
-  height: 25px;
-  line-height: 25px;
-  font-size: 16px;
-  padding: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 .user-form input[type="text"]:focus,
 .user-form input[type="date"]:focus,
@@ -82,33 +82,33 @@
 {
 }
 .user-form li > span{
-  background: #F3F3F3;
-  display: block;
-  padding: 3px;
-  margin: 0 -9px -9px -9px;
-  text-align: center;
-  color: #C0C0C0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 }
 .user-form textarea{
-  resize:none;
+    resize:none;
 }
 .user-form input[type="submit"],
 .user-form input[type="button"],
 .user-form button {
-  width:150px;
-  background: #2471FF;
-  border: none;
-  padding: 10px 20px 10px 20px;
-  border-bottom: 3px solid #5994FF;
-  border-radius: 3px;
-  color: #D2E2FF;
-  margin: 10px;
+    width:150px;
+    background: #2471FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994FF;
+    border-radius: 3px;
+    color: #D2E2FF;
+    margin: 10px;
 }
 .user-form input[type="submit"]:hover,
 .user-form input[type="button"]:hover,
 .user-form button:hover{
-  background: #6B9FFF;
-  color:#fff;
+    background: #6B9FFF;
+    color:#fff;
 }

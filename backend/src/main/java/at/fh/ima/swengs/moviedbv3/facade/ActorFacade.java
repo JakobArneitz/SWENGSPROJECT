@@ -28,9 +28,6 @@ public class ActorFacade {
         entity.setRating(dto.getRating());
         entity.setGender(dto.getGender());
         entity.setDayOfBirth(dto.getDayOfBirth());
-        entity.setWeight(dto.getWeight());
-        entity.setHeight(dto.getHeight());
-        entity.setNickName(dto.getNickName());
         entity.setMovies(movieService.getMovies(dto.getMovies()));
     }
 
@@ -42,9 +39,6 @@ public class ActorFacade {
         dto.setRating(entity.getRating());
         dto.setGender(entity.getGender());
         dto.setDayOfBirth(entity.getDayOfBirth());
-        dto.setWeight(entity.getWeight());
-        dto.setHeight(entity.getHeight());
-        dto.setNickName(entity.getNickName());
         dto.setMovies(entity.getMovies().stream().map((m) -> m.getId()).collect(Collectors.toSet()));
     }
 

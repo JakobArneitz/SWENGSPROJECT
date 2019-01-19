@@ -26,30 +26,30 @@ export class HeroesListComponent implements OnInit {
 
   ngOnInit() {
     this.movieService.getAll()
-      .subscribe((movies: any) => {
-        this.movies = movies;
-      });
-
+        .subscribe((movies: any) => {		  
+            this.movies = movies;
+        });
+	  
     this.heroService.getAll()
-      .subscribe((heroes: any) => {
-        this.heroes = heroes;
-      });
+        .subscribe((heroes: any) => {
+            this.heroes = heroes;
+        });	  
   }
-
+  
   getMoviesForHero(id: number){
     this.moviesForHero =[];
-    for (var j=0; j<this.heroes.length;j++){
-      if(this.heroes[j].id == id){
-        this.heroService.getById(this.heroes[j].id)
-          .subscribe((hero: any) => {
-            this.hero = hero;
-            this.index = this.hero.movies;
-            for(var i = 0; i < this.index.length;i++){
-              console.log(this.movies[0]);
-              this.moviesForHero[i] = this.movies[i].title;
-            }
-          });
-      }
+    for(var j=0;j<this.heroes.length;j++){
+        if(this.heroes[j].id == id){
+            this.heroService.getById(this.heroes[j].id)
+                .subscribe((hero: any) => {
+                    this.hero = hero;
+                    this.index = this.hero.movies;
+                    for(var i = 0; i < this.index.length;i++){
+                        console.log(this.movies[0]);
+                        this.moviesForHero[i] = this.movies[i].title;
+                    }
+            });
+        }
     }
   }
 
@@ -61,14 +61,14 @@ export class HeroesListComponent implements OnInit {
       });
 
   }
-
+  	
   createHero() {
     this.router.navigate(['/hero-form']);
   }
-
-  back() {
-    if(this.auth.isAdmin === false){
-      this.router.navigate(['/user-dashboard']);
-    }else this.router.navigate(['/admin-dashboard']);
-  }
+    
+    back() {
+        if(this.auth.isAdmin === false){
+            this.router.navigate(['/user-dashboard']);
+        }else this.router.navigate(['/admin-dashboard']);
+    }
 }
