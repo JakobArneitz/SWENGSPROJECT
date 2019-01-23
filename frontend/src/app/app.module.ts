@@ -29,6 +29,43 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { HeroesFightingListComponent } from './heroes-fighting-list/heroes-fighting-list.component';
 import { UserRequestComponent } from './user-request/user-request.component';
 
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+} from '@angular/material';
+import {HttpModule} from '@angular/http';
+import {CdkTableModule} from '@angular/cdk/table';
+
+
 defineLocale('de', deLocale);
 
 
@@ -39,6 +76,44 @@ export function tokenGetter() {
 export const httpInterceptorProviders = [
   {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
 ];
+
+@NgModule({
+  exports: [
+    CdkTableModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+  ]
+})
+export class DemoMaterialModule {}
 
 @NgModule({
   declarations: [
@@ -60,6 +135,9 @@ export const httpInterceptorProviders = [
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+	DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

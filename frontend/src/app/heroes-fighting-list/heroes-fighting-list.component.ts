@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MatTableDataSource} from '@angular/material';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Hero} from '../api/hero';
 import {Hire} from '../api/hire';
@@ -20,6 +21,9 @@ export class HeroesFightingListComponent implements OnInit {
   heros: Array<Hero>;
   moviesForHero =[];
   index;
+  
+  displayedColumns = ['id','enemyName', 'enemyPower', 'superhero', 'hireFrom','hireTo'];
+  dataSource: MatTableDataSource<Hire>;
 
   constructor(public auth: IsadminService, private http: HttpClient, private heroService: HeroService, private router: Router, private hireService: HireService, private route: ActivatedRoute) {
   }
@@ -28,14 +32,22 @@ export class HeroesFightingListComponent implements OnInit {
     this.hireService.getAll()
         .subscribe((hires: any) => {		  
             this.hires = hires;
+			this.dataSource = new MatTableDataSource(this.hires);
         });
-	  
+		
     this.heroService.getAll()
         .subscribe((heros: any) => {
             this.heros = heros;
-        });	  
+        });
+		
   }
- 
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLowerCase();
+    this.dataSource.filter = filterValue;
+  }
+  
   deleteHire(hire: Hire) {
 
     this.hireService.delete(hire)

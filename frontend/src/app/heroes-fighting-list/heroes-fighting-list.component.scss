@@ -46,11 +46,40 @@ h1{
 
 .table-fight tr:nth-child(even){background-color: #F3F3F3;}
 
-.table-fight th {
+.table-fight th,mat-header-cell {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: #2471FF;
   color: white;
   
+}
+
+button{
+	width: 150px;
+	background: #2471FF;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5994FF;
+	border-radius: 3px;
+	color: #D2E2FF;
+	margin: 10px;
+        text-align: center;
+}
+button:hover,
+{
+	background: #6B9FFF;
+	color:#fff;
+}
+
+.filter{
+	width: 200px;
+	background: #2471FF;
+	border: none;
+	padding: 10px 10px 10px 10px;
+	border-bottom: 3px solid #5994FF;
+	border-radius: 3px;
+	color: #FFF;
+	margin: 10px;
+    text-align: center;
 }

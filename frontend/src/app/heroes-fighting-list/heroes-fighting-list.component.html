@@ -1,5 +1,5 @@
 <h1>Heroes Currently Fighting</h1>
-<table class="table-fight">
+<table class="table-fight" *ngIf="this.auth.isAdmin === true">
     <tr>
         <th>Enemy Name</th>
         <th>Enemy Power</th>
@@ -19,7 +19,57 @@
         <td *ngIf="this.auth.isAdmin === true"><button [routerLink]="'/user-request/' + hire.id">Edit</button></td>
         <td *ngIf="this.auth.isAdmin === true"><button type="button" (click)="deleteHire(hire)">Delete</button></td>
     </tr>
-    <button type="button" (click)="back()">
+    <button type="button" [routerLink]="'/admin-dashboard'">
         Back
     </button>
 </table>
+<div *ngIf="this.auth.isAdmin === false">
+Filter the table
+<div class="filter">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)">
+  </mat-form-field>
+</div>
+
+<div>
+
+  <mat-table [dataSource]="dataSource" matSort>
+	<ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+	
+    <ng-container matColumnDef="enemyName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Enemy Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.enemyName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="enemyPower">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Enemy Power </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.enemyPower}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="superhero">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Superhero Assigned </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.superhero}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="hireFrom">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Assigned Date From </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.hireFrom}} </mat-cell>
+    </ng-container>
+	
+    <ng-container matColumnDef="hireTo">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Assigned Date En </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.hireTo}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+</div>
+<button type="button" [routerLink]="'/user-dashboard'">
+        Back
+    </button>
+</div>
