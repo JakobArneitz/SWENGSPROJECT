@@ -26,7 +26,7 @@ npm i ngx-avatar
 
 5. now open backend in intellij and modify application.properties, only thing to do there is to change the password, open frontend in intellij, it might take some time for the configuration to load and then you can start backend and then start frontend in two separate intellij winodws. 
 
-you can also run the project on localhost, for that execute the sql script commands provided and change application.properties to your local database and password.
+you can also run the project on localhost, for that execute the sql script commands provided in repository root and change application.properties to your local database and password.
 
 6. open your desired browser and type in localhost:4200
 
